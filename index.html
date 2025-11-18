@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoDe</title>
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css" />
+</head>
+<!-- todo
+1) alt к изображениям -->
+<body>
+    <header class="header">
+        <div class="header__container">
+            <div class="header__menu">
+                <a href="/" class="logo logo--header">
+                    <span class="logo__text">
+                        <span class="logo__part logo__part--first">C</span>
+                        <span class="logo__part logo__part--second">o</span>
+                        <span class="logo__part logo__part--third">D</span>
+                        <span class="logo__part logo__part--fourth">e</span>
+                    </span>
+                </a>
+
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item">
+                            <a href="#courses" class="header__nav-link">Чему вы научитесь</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#info" class="header__nav-link">Процесс обучения</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#price" class="header__nav-link">Стоимость</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#contacts" class="header__nav-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="header__contacts">
+                <a href="tel:+74993489396" class="header__phone">+7 (499) 348 93 96</a>
+            </div>
+
+            <button class="header__burger" aria-label="Меню">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-overlay"></div>
+
+    <main>
+        <section id="courses" class="hero">
+            <button class="hero-slider__arrow hero-slider__arrow--prev">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14 6.36395C14.5523 6.36395 15 6.81167 15 7.36395C15 7.91624 14.5523 8.36395 14 8.36395L14 6.36395ZM0.292893 8.07106C-0.0976315 7.68053 -0.0976314 7.04737 0.292893 6.65684L6.65685 0.292884C7.04738 -0.0976402 7.68054 -0.0976401 8.07107 0.292884C8.46159 0.683409 8.46159 1.31657 8.07107 1.7071L2.41421 7.36395L8.07107 13.0208C8.46159 13.4113 8.46159 14.0445 8.07107 14.435C7.68054 14.8255 7.04738 14.8255 6.65685 14.435L0.292893 8.07106ZM14 8.36395L1 8.36395L1 6.36395L14 6.36395L14 8.36395Z"
+                        fill="#22253B" />
+                </svg>
+            
+            </button>
+            <button class="hero-slider__arrow hero-slider__arrow--next">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M1 6.36395C0.447715 6.36395 -4.82823e-08 6.81167 0 7.36395C4.82823e-08 7.91624 0.447715 8.36395 1 8.36395L1 6.36395ZM14.7071 8.07106C15.0976 7.68053 15.0976 7.04737 14.7071 6.65684L8.34315 0.292884C7.95262 -0.0976402 7.31946 -0.0976401 6.92893 0.292884C6.53841 0.683409 6.53841 1.31657 6.92893 1.7071L12.5858 7.36395L6.92893 13.0208C6.53841 13.4113 6.53841 14.0445 6.92893 14.435C7.31946 14.8255 7.95262 14.8255 8.34315 14.435L14.7071 8.07106ZM1 8.36395L14 8.36395L14 6.36395L1 6.36395L1 8.36395Z"
+                        fill="#22253B" />
+                </svg>
+            
+            </button>
+            <div class="hero-slider">
+                <!-- первый слайд -->
+                <div class="hero-slide">
+                    <div class="hero__container">
+                        <div class="hero__text-button">
+                            <h1 class="hero__title">Школа <span class="hero__decorative-text">{</span><span
+                                    class="hero__bold-text">программирования</span><span
+                                    class="hero__decorative-text">}</span>
+                                для тех, кому нужны реальные навыки, а&nbsp;не&nbspпросто сертификат</h1>
+                            <div class="hero__decorative-line"></div>
+                            <p class="hero__description">Закажите звонок, и наш специалист свяжется с вами в ближайшее
+                                время</p>
+                            <button class="btn js-open-modal">
+                                <span class="btn__text">Заказать звонок</span>
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999999C15 0.447715 14.5523 -5.74472e-07 14 -8.27353e-07L5 -2.65626e-08C4.44772 -3.63737e-07 4 0.447715 4 1C4 1.55228 4.44772 2 5 2L13 2L13 10C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 10L15 0.999999ZM1.70711 14.7071L14.7071 1.70711L13.2929 0.292893L0.292893 13.2929L1.70711 14.7071Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        <img class="hero__image" src="./assets/coding_pic.svg" alt="">
+                    </div>
+                </div>
+                <!-- второй -->
+                <div class="hero-slide hero_slide">
+                    <div class="hero__container">
+                        <div class="hero__text-button hero__text-button--next">
+                            <h1 class="hero__title">Обучение<br>через практику</h1>
+                            <div class="hero__decorative-line"></div>
+                            <p class="hero__description">Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего труда.</p>
+                            <button class="btn btn--next js-open-modal">
+                                <span class="btn__text">Заказать звонок</span>
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999999C15 0.447715 14.5523 -5.74472e-07 14 -8.27353e-07L5 -2.65626e-08C4.44772 -3.63737e-07 4 0.447715 4 1C4 1.55228 4.44772 2 5 2L13 2L13 10C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 10L15 0.999999ZM1.70711 14.7071L14.7071 1.70711L13.2929 0.292893L0.292893 13.2929L1.70711 14.7071Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        <img class="hero__second-image" src="./assets/second_slider.svg" alt="">
+                    </div>
+                </div>
+                <!-- третий -->
+                <div class="hero-slide">
+                    <div class="hero__container">
+                        <div class="hero__text-button hero__text-button--next">
+                            <h1 class="hero__title">Весь материал разбит на небольшие уроки</h1>
+                            <div class="hero__decorative-line"></div>
+                            <p class="hero__description">Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания</p>
+                            <button class="btn btn--next js-open-modal">
+                                <span class="btn__text">Заказать звонок</span>
+                                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999999C15 0.447715 14.5523 -5.74472e-07 14 -8.27353e-07L5 -2.65626e-08C4.44772 -3.63737e-07 4 0.447715 4 1C4 1.55228 4.44772 2 5 2L13 2L13 10C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 10L15 0.999999ZM1.70711 14.7071L14.7071 1.70711L13.2929 0.292893L0.292893 13.2929L1.70711 14.7071Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                        <img class="hero__third-image" src="./assets/third_slider.svg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="information">
+            <h2 class="information__title">Обучение в CoDe – это удобно и результативно</h2>
+            <div class="information__cards">
+                <div class="information__card information__card--practice">
+                    <img class="information__card-image" src="./assets/first_card.svg" alt=""></img>
+                    <p class="information__card-title">Огромное количество практики</p>
+                    <p class="information__card-description">Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+                </div>
+                <div class="information__card information__card--methods">
+                    <img class="information__card-image" src="./assets/second_card.svg" alt=""></img>
+                    <p class="information__card-title">Современные методики обучения</p>
+                    <p class="information__card-description">Спиральное обучение: погружаемся в материал постепенно, виток за витком</p>
+                </div>
+                <div class="information__card information__card--narration">
+                    <img class="information__card-image" src="./assets/third_card.svg" alt=""></img>
+                    <p class="information__card-title">Простое и понятное изложение</p>
+                    <p class="information__card-description">Вместо заумных терминов - примеры из реального мира</p>
+                </div>
+                <div class="information__card information__card--schedule">
+                    <img class="information__card-image" src="./assets/fourth_card.svg" alt=""></img>
+                    <p class="information__card-title">Гибкий график занятий</p>
+                    <p class="information__card-description">Учитесь в любое время в удобном для вас темпе</p>
+                </div>
+                <div class="information__card information__card--connection">
+                    <img class="information__card-image" src="./assets/fifth_card.svg" alt=""></img>
+                    <p class="information__card-title">Прямая связь с опытными программистами</p>
+                    <p class="information__card-description">Задавайте вопросы и&nbsp;отправляйте свой код на проверку</p>
+                </div>
+                <div class="information__card information__card--payment">
+                    <img class="information__card-image" src="./assets/sixth_card.svg" alt=""></img>
+                    <p class="information__card-title">Оплата небольшими частями</p>
+                    <p class="information__card-description">Платите только за тот материал, который сейчас изучаете, а&nbsp;не&nbsp;за&nbsp;весь курс сразу</p>
+                </div>
+                <div class="information__card information__card--refund">
+                    <img class="information__card-image" src="./assets/seventh_card.svg" alt=""></img>
+                    <div class="information__card--refund-info">
+                    <p class="information__card-title">Быстрый и легкий возврат</p>
+                    <p class="information__card-description">Если передумаете учиться – вернем деньги за 3 рабочих&nbsp;дня</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="price" class="about">
+            <div class="about__support">
+                <img class="about__image about__image--support" src="./assets/help_support.png" alt="">
+                <div class="about__content">
+                    <p class="about__title about__title--support">Помощь и поддержка</p>
+                    <p class="about__text about__text--support">Если в процессе обучения возникнут сложности, вы всегда сможете задать вопрос своему наставнику.</p>
+                    <p class="about__text">Раз в несколько уроков вы будете получать большое задание, которое нужно будет сдавать на проверку код-ревьюеру. Он внимательно изучит ваш код, найдет ошибки и поможет вам стать лучше.</p>
+                </div>
+            </div>
+            <div class="about__methods">
+                <div class="about__content">
+                    <p class="about__title">Методика обучения</p>
+                    <p class="about__text">Весь учебный материал структурирован по принципу «спирального обучения». Сначала вы получаете базовые знания, а затем на каждом витке спирали углубляетесь в изученные темы, доводя их понимание до совершенства. Такой подход упрощает обучение и гарантирует, что вы не пропустите ничего важного.</p>
+                </div>
+                <img class="about__image about__image--methods" src="./assets/methods_about.png" alt="">
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="gallery__container">
+            <a href="./assets/people.png" data-fancybox="gallery"><img class="gallery__image" src="./assets/people.png" alt=""></a>
+            <a href="./assets/languages.png" data-fancybox="gallery"><img class="gallery__image" src="./assets/languages.png" alt=""></a>
+            <a href="./assets/code_gallery.png" data-fancybox="gallery"><img class="gallery__image" src="./assets/code_gallery.png" alt=""></a>
+            <a href="./assets/coding_gallety.png" data-fancybox="gallery"><img class="gallery__image" src="./assets/coding_gallety.png" alt=""></a>
+            <a href="./assets/kids.png" data-fancybox="gallery"><img class="gallery__image" src="./assets/kids.png" alt=""></a>
+            </div>
+        </section>
+
+        <section id="contacts" class="map">
+            <div class="map__container" id="map"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__logo-socials">
+                <div class="footer__logo">
+                    <a href="/" class="logo logo--footer">
+                        <span class="logo__text">
+                            <span class="logo__part logo__part--first">C</span>
+                            <span class="logo__part logo__part--second">o</span>
+                            <span class="logo__part logo__part--third">D</span>
+                            <span class="logo__part logo__part--fourth">e</span>
+                        </span>
+                    </a>
+                    <p class="footer__logo-text">Школа программирования</p>
+                </div>
+                <div class="footer__socials">
+                        <a href="/" class="footer__socials-link"><img class="footer__socials-icon" src="./assets/instagram.svg" alt=""></a>
+                        <a href="/" class="footer__socials-link"><img class="footer__socials-icon" src="./assets/vk.svg" alt=""></a>
+                        <a href="/" class="footer__socials-link"><img class="footer__socials-icon" src="./assets/facebook.svg" alt=""></a>
+                        <a href="/" class="footer__socials-link"><img class="footer__socials-icon" src="./assets/youtube.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="footer__nav">
+                <div class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-item"><a href="#courses" class="footer__menu-link">Чему вы научитесь</a></li>
+                        <li class="footer__menu-item"><a href="#info" class="footer__menu-link">Процесс обучения</a></li>
+                        <li class="footer__menu-item"><a href="#price" class="footer__menu-link">Стоимость</a></li>
+                        <li class="footer__menu-item"><a href="#contacts" class="footer__menu-link">Контакты</a></li>
+                        <li class="footer__menu-item"><a href="#contacts" class="footer__menu-link">Регистрация</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contacts">
+                    <a href="tel:+79999999999" class="footer__contacts-item footer__contacts-item--phone">+7 (999) 999 99 99</a>
+                    <a href="mailto:info@code.ru" class="footer__contacts-item">info@code.ru</a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="footer__underline"></div>
+            <div class="footer__additional">
+                <p class="footer__additional-item">&copy; 2023 — Все права защищены</p>
+                <div class="footer__additional-info">
+                <a href="#" class="footer__additional-item">Пользовательское соглашение</a>
+                <a href="#" class="footer__additional-item">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- модалка -->
+    <div id="callback-modal" style="display: none; max-width: 635px; padding: 0;">
+        <div class="modal">
+            <div class="modal__header">
+                <h3 class="modal__title">Заказать звонок</h3>
+            </div>
+            <div class="modal__body">
+                <form class="modal__form">
+                    <div class="modal__field">
+                        <label class="modal__label">Имя</label>
+                        <input type="text" class="modal__input" placeholder="ваше имя" required>
+                    </div>
+                    <div class="modal__field">
+                        <label class="modal__label">Телефон</label>
+                        <input type="tel" class="modal__input" placeholder="+7 ХХХ - ХХХ - ХХ -ХХ" required>
+                    </div>
+                    <div class="modal__field">
+                        <label class="modal__label">Email</label>
+                        <input type="email" class="modal__input" placeholder="mail@site.com">
+                    </div>
+                    <div class="modal__field">
+                        <label class="modal__label">Сообщение</label>
+                        <textarea class="modal__input modal__textarea" placeholder="Ваше сообщение ..." rows="4"></textarea>
+                    </div>
+                    <p class="modal__agreement">Нажимая кнопку “Отправить”, соглашаюсь с <a href="#" class="modal__agreement-politics">политикой конфидениальности</a></p>
+                    <button type="submit" class="modal__submit btn">
+                        <span class="btn__text">Отправить</span>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.292893 13.2929C-0.0976311 13.6834 -0.0976311 14.3166 0.292893 14.7071C0.683418 15.0976 1.31658 15.0976 1.70711 14.7071L0.292893 13.2929ZM15 0.999999C15 0.447715 14.5523 -5.74472e-07 14 -8.27353e-07L5 -2.65626e-08C4.44772 -3.63737e-07 4 0.447715 4 1C4 1.55228 4.44772 2 5 2L13 2L13 10C13 10.5523 13.4477 11 14 11C14.5523 11 15 10.5523 15 10L15 0.999999ZM1.70711 14.7071L14.7071 1.70711L13.2929 0.292893L0.292893 13.2929L1.70711 14.7071Z"
+                                fill="white" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5fcc325a-6ace-420c-be54-5ed52ddb6487&lang=ru_RU"
+        type="text/javascript"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
